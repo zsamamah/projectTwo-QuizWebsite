@@ -27,7 +27,7 @@ const questions = [
     {
         "q":"Choose the correct HTML element for the largest heading:",
         "a":["<header>","<h6>","<head>","<h1>"],
-        "value":1
+        "value":4
     },
     {
         "q":"How can you open a link in a new tab/browser window?",
@@ -65,7 +65,7 @@ function next(){
     z.appendChild(document.createElement("br"));
     q.innerHTML=questions[counter].q;
     let val=questions[counter].value;
-    console.log(val);
+    // console.log(val);
     let f=document.createElement("form");
     f.setAttribute("onchange","activeBtn()");
     for(let i=0;i<4;i++){
@@ -75,7 +75,7 @@ function next(){
         x.id=`a${i+1}`;
         x.value=questions[i].value;
         let y=document.createElement("label");
-        y.for=x.id;
+        y.setAttribute("for",x.id);
         y.innerText=questions[counter].a[i];
         if(i+1==val){
             x.value=1;
@@ -107,12 +107,22 @@ function z_result(){
     window.location.href="./result.html";
 }
 function activeBtn(){
-    let answers=["a1","a2","a3","a4"]
-    document.getElementById("nextBtn").disabled=false;
+    let answers=["a1","a2","a3","a4"];
+    document.getElementById("nextBtn").disabled = false;
     for(let i=0;i<4;i++){
         if(document.getElementById(answers[i]).checked){
             sessionStorage.setItem(`q${counter}`,i+1);
         }
     }
-    let my_id=`a${counter}`;
+    checkAnswer();
+}
+
+function checkAnswer(){
+    let final_value = sessionStorage.getItem(`q${counter}`);
+    for(let i=0;i<4;i++)
+        if(questions[counter-1].value==final_value)
+            sessionStorage.setItem(`result${counter}`,1);
+        else
+            sessionStorage.setItem(`result${counter}`,0);
+    
 }
