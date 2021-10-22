@@ -1,0 +1,54 @@
+:root{
+    --theme-Color:green;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.th_Result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    color: var(--theme-Color);
+}
+.th_Status{
+    font-size: 2rem;
+}
+.th_Result>i{
+    font-size: 4rem;
+}
+.th_Result>h2{
+    font-size: 1.5rem;
+}
+
+
+/* ....aya_code ........*/
+#A_resultContainer{
+    width: 50%;
+    height: auto;
+    padding: 1em;
+    margin: 4em auto;
+    background-color: white;
+    
+  }
+  #show{
+  text-align: center;
+  margin: 1em auto;
+  }
+  tr:nth-child(odd) {
+  background-color: rgba(173, 173, 173, 0.473);
+  }
+  td ,th{
+    width: 30em;
+    border-bottom: rgb(48, 48, 58) solid 0.5px;
+    text-align: center;
+  }
+  #table{
+    display: none;
+    margin: 2rem auto;
+    width: 100%;
+  }
+  
+  /* ......aya_code...... */
