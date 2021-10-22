@@ -105,6 +105,10 @@ function next(){
 }
 function z_result(){
     window.location.href="./result.html";
+    for(let i=0;i<questions.length;i++){
+        sessionStorage.setItem(`question${i+1}`,questions[i].q);
+        sessionStorage.setItem(`answers${i+1}`,questions[i].a);
+    }
 }
 function activeBtn(){
     let answers=["a1","a2","a3","a4"];
