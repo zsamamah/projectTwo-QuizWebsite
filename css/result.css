@@ -1,0 +1,24 @@
+:root{
+    --theme-Color:green;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.th_Result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    color: var(--theme-Color);
+}
+.th_Status{
+    font-size: 2rem;
+}
+.th_Result>i{
+    font-size: 4rem;
+}
+.th_Result>h2{
+    font-size: 1.5rem;
+}
