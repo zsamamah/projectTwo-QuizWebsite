@@ -26,9 +26,9 @@ body{
 
 /* ....aya_code ........*/
 #A_resultContainer{
-    width: 50%;
+    width: 50rem;
     height: auto;
-    padding: 1em;
+    padding: 2em;
     margin: 4em auto;
     background-color: white;
     
@@ -38,17 +38,22 @@ body{
   margin: 1em auto;
   }
   tr:nth-child(odd) {
-  background-color: rgba(173, 173, 173, 0.473);
+  background-color: rgba(145, 147, 161, 0.349);
   }
   td ,th{
-    width: 30em;
-    border-bottom: rgb(48, 48, 58) solid 0.5px;
+
+    border-bottom: rgb(152, 152, 219) solid 0.5px;
     text-align: center;
+    padding: 0em 1em;
+    padding: 1em;
+  }
+  th{
+      font-weight: bold;
   }
   #table{
     display: none;
     margin: 2rem auto;
-    width: 100%;
+    width:100%;
   }
   
   /* ......aya_code...... */

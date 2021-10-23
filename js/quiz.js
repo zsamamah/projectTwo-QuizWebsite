@@ -27,7 +27,7 @@ const questions = [
     {
         "q":"Choose the correct HTML element for the largest heading:",
         "a":["<header>","<h6>","<head>","<h1>"],
-        "value":4
+        "value": 4
     },
     {
         "q":"How can you open a link in a new tab/browser window?",
@@ -63,8 +63,8 @@ function next(){
     let q=document.createElement("h3");
     z.appendChild(q);
     z.appendChild(document.createElement("br"));
-    q.innerHTML=questions[counter].q;
-    let val=questions[counter].value;
+    q.innerHTML=counter+1+") "+questions[counter].q;
+    let val= questions[counter].value;
     // console.log(val);
     let f=document.createElement("form");
     f.setAttribute("onchange","activeBtn()");
