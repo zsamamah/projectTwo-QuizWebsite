@@ -68,7 +68,7 @@ function hideTable(){
 
             }
         }
-    
+    //....................End of table commented by Aya.............................//
 
         
 
