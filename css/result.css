@@ -50,10 +50,18 @@ body{
   th{
       font-weight: bold;
   }
-  #table{
+  /* #table{
     display: none;
     margin: 2rem auto;
     width:100%;
+  } */
+  .showTable{
+    display: none;
+    margin: 2rem auto;
+    width:100%;
+  }
+  .showTable.display{
+      display: block;
   }
   
   /* ......aya_code...... */

@@ -33,15 +33,28 @@ else{
 }
 
     //..........Result Table show _Aya............
-function tableResult(){
-    document.getElementById("table").style.display='block';
-    document.getElementById("show").innerHTML='Hide Table';
-}
+    // let a_counter=0;
+    // function tableResult(){
+    //     if(a_counter==0){
+    //         document.getElementById("table").style.display='block';
+    //     document.getElementById("show").innerHTML='Hide Table';
+    //     a_counter++;
+    //     }
+    //     else{
+    //     document.getElementById("table").style.display='none';
+    //     document.getElementById("show").innerHTML='Show Table Result';
+    //     a_counter=0;
+    //     }
+    function tableResult(){
+    let table=document.getElementById('table');
+    table.classList.toggle("display");
+   let showLink= document.getElementById("show");
+   if(showLink.innerHTML==="Hide Table"){showLink.innerHTML="Show Table Result";}
+   else{showLink.innerHTML="Hide Table";}
+    }
+    
     //..........Result Table hide _Aya............
-function hideTable(){
-    document.getElementById("table").style.display='none';
-    document.getElementById("show").innerHTML='Show Table Result';
-}
+
  
 //....................AYA'S WORK ON TABLE& STORAGE.............................
         let table1=document.getElementById('table');
@@ -64,10 +77,12 @@ function hideTable(){
             table1.appendChild(tr);
             console.log(a_answer);
             if(results==1){
+                // td2.style.color="green";
                 tr.style.background=A_green;
                 td3.innerHTML='True';
             }
             else{
+                 // td2.style.color="red";
                 tr.style.background=A_red;
                 td3.innerHTML='False';
 
