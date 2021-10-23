@@ -21,7 +21,7 @@ if(result>=questionNum*0.5){
        comment.innerHTML="Not bad";
   } else if(result>=questionNum*0.7 && result<questionNum*0.9){ comment.innerHTML="Very good";}
    else if(result>=questionNum*0.9 && result<=questionNum*1){comment.innerHTML="Excellent";}
-document.body.style.background=A_green; //aya_code...........
+// document.body.style.background=A_green; //aya_code...........
 }
 else{
     let status=document.getElementById("th_Status");
@@ -29,8 +29,14 @@ else{
     icon.className="fas fa-times-circle";
     status.innerHTML='Oops! You Failed';
     score.innerHTML=`${result}/${questionNum}`;
-    document.body.style.background=A_red; //aya_code..........
+    // document.body.style.background=A_red; //aya_code..........
 }
+const togglebtn = document.querySelector(".toggle-btn");
+
+togglebtn.addEventListener("click", () => {
+  document.querySelector(".nav-list").classList.toggle("hidden");
+  document.querySelector(".social-icons").classList.toggle("hidden");
+}); 
 
     //..........Result Table show _Aya............
     // let a_counter=0;
@@ -77,15 +83,12 @@ else{
             table1.appendChild(tr);
             console.log(a_answer);
             if(results==1){
-                // td2.style.color="green";
                 tr.style.background=A_green;
-                td3.innerHTML='True';
+                td3.innerHTML='<img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/ffffff/external-check-banking-and-finance-kiranshastry-lineal-color-kiranshastry.png"/>';
             }
             else{
-                 // td2.style.color="red";
                 tr.style.background=A_red;
-                td3.innerHTML='False';
-
+                td3.innerHTML='<img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/fa314a/external-close-banking-and-finance-kiranshastry-lineal-color-kiranshastry.png"/>';
             }
         }
     //....................End of table commented by Aya.............................//
