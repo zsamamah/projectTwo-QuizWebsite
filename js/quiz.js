@@ -50,6 +50,8 @@ const questions = [
         "value":3
     }
 ];
+let qLength=questions.length;
+sessionStorage.setItem('questionsNum',qLength);
 
 function startQuiz(){
     document.getElementById("z_quizBrief").style.display="none";
@@ -89,7 +91,7 @@ function next(){
     }
     let btn=document.createElement("button");
     btn.type="button";
-    if(counter==9){
+    if(counter==questions.length-1){
         btn.innerText="submit";
         btn.setAttribute("onclick","z_result()");
     }

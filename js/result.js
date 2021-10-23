@@ -1,4 +1,8 @@
-let result=9;   //Just for testing
+let result=0;   //........Tharaa.........
+let questionNum=sessionStorage.getItem('questionsNum');
+for(let i=1;i<=questionNum;i++){
+   if(sessionStorage.getItem(`result${i}`)==1){result++;}
+}
 //...........Aya_var.............................
 let A_resCont= document.getElementById('A_resultContainer');
 let A_red = 'rgba(255, 99, 99, 0.12)';
@@ -8,14 +12,15 @@ let resultDiv=document.getElementById('th_Result');
 let comment=document.getElementById('th_Comment');
 let icon=document.getElementById('iconId');
 let score=document.getElementById('th_Score');
-if(result>=5){
+if(result>=questionNum*0.5){
     let status=document.getElementById("th_Status");
     status.innerHTML='Congratulations!';
-    score.innerHTML=`${result}/10`;
-    if(result==5 || result==6){
+    score.innerHTML=`${result}/${questionNum}`;
+
+    if(result>=questionNum*0.5 && result<questionNum*0.7){
        comment.innerHTML="Not bad";
-} else if(result==7 || result==8){ comment.innerHTML="Very good";}
-else if(result==9 || result==0){comment.innerHTML="Excellent";}
+  } else if(result>=questionNum*0.7 && result<questionNum*0.9){ comment.innerHTML="Very good";}
+   else if(result>=questionNum*0.9 && result<=questionNum*1){comment.innerHTML="Excellent";}
 document.body.style.background=A_green; //aya_code...........
 }
 else{
@@ -23,7 +28,7 @@ else{
     resultDiv.style.setProperty('--theme-Color', 'red');
     icon.className="fas fa-times-circle";
     status.innerHTML='Oops! You Failed';
-    score.innerHTML=`${result}/10`;
+    score.innerHTML=`${result}/${questionNum}`;
     document.body.style.background=A_red; //aya_code..........
 }
 
@@ -40,7 +45,7 @@ function hideTable(){
  
 //....................AYA'S WORK ON TABLE& STORAGE.............................
         let table1=document.getElementById('table');
-        for(let a_i=0;a_i<10;a_i++){
+        for(let a_i=0;a_i<questionNum;a_i++){
             //    let answers= sessionStorage.getItem(`answers${a_i}`);
             let a_answer = sessionStorage.getItem(`answers${a_i+1}`);
              a_answer=a_answer.split(',');
