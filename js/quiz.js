@@ -131,4 +131,4 @@ function checkAnswer(){
         else
             sessionStorage.setItem(`result${counter}`,0);
     
-}
+} 
