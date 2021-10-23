@@ -4,15 +4,110 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="author" content="quizer group" />
+    <meta
+      name="description"
+      content="web app that contains quiz, you can login and play!"
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript, SEO, Linux, Ubuntu" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Home</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
     <header>
-      <nav></nav>
+      <nav class="navbar">
+        <img
+          src="./assets/logo.png"
+          alt="logo picture with one word"
+          class="logo"
+        />
+        <div class="nav-list hidden">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#Skills">About us</a></li>
+            <li><a href="#Clients">Contact us</a></li>
+            <li><a href="#" class="dark_mode">Dark mode</a></li>
+          </ul>
+        </div>
+        <div class="social-icons hidden">
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/eng_farah92/?r=nametag">
+                <i class="fa fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/zsamamah/projectTwo-QuizWebsite">
+                <i class="fa fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/farah-habarnih/">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="toggle-btn">
+        <i class="fa fa-bars"></i>
+      </div>
+      <section class="intro_section">
+        <div class="intro_section_container">
+          <h1>Welcome to our web app</h1>
+          <h2>Glad to see you here!</h2>
+          <p>
+            Aaron web quiz brings trivia night to your TV! Grab up to 5 of your
+            friends, pick your avatar, then answer the trivia questions as
+            quickly as you can to rise through the rankings and rule your living
+            room.
+          </p>
+          <span
+            ><button class="btn register">Register</button
+            ><button class="btn login">Login</button></span
+          >
+        </div>
+
+        <img src="./assets/header-image-section.jpg" alt="quiz image" />
+      </section>
     </header>
-    <main></main>
+    <main>
+      <form autocomplete="off">
+      <h1>LOGIN</h1>
+      <div class="form-group">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email Address"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="password"
+          name="pwd"
+          id="pwd"
+          placeholder="Password"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <button type="submit">Sign In</button>
+      </div>
+    </main>
     <footer></footer>
     <script src="./js/index.js"></script>
   </body>
