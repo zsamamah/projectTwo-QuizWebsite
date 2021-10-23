@@ -1,3 +1,13 @@
+//.............Tharaa..............
+let scrollBtn=document.getElementById("scroll-up");
+document.addEventListener('scroll',function(){
+    if(document.body.scrollTop>20 || document.documentElement.scrollTop > 20){
+scrollBtn.style.display="block";}
+else{
+    scrollBtn.style.display="none";
+}
+})
+
 let result=0;   //........Tharaa.........
 let questionNum=sessionStorage.getItem('questionsNum');
 for(let i=1;i<=questionNum;i++){
@@ -93,6 +103,9 @@ togglebtn.addEventListener("click", () => {
         }
     //....................End of table commented by Aya.............................//
 
-        
-
-           
+     //.........................Tharaa Code...................................//
+     let logoutBtn=document.getElementById('logout');
+     logoutBtn.addEventListener('click',function(){
+        //  window.location.href="./index.html";
+         sessionStorage.clear();
+     })

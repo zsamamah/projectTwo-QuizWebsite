@@ -106,6 +106,9 @@ a {
     color: #475edf;
     font-size: 1.3em;
   }
+  #logout,.th_home{
+    color: #475edf; 
+  }
   
   .social-icons ul li:hover {
     transform: scale(1.2);
@@ -130,6 +133,19 @@ a {
     text-shadow: 1px 1px 2px black;
     color: black;
   }
+  /*............Tharaa.................*/
+  #scroll-up{
+    display: none;
+    position: fixed;
+    margin-left: 90%;
+    cursor: pointer;
+    z-index: 99;
+    color: 475edf;
+    font-size: 1.7rem;
+    margin-right: 3%;
+    bottom: 5;
+  }
+/*..........Media-Query...............*/
   @media all and (max-width: 1024px) {
     .toggle-btn i {
       display: block;
