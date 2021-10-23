@@ -7,6 +7,13 @@ let password = document.getElementById('password');
 let user_data={};
 let all_user_data=[];
 
+const togglebtn = document.querySelector(".toggle-btn");
+
+togglebtn.addEventListener("click", () => {
+  document.querySelector(".nav-list").classList.toggle("hidden");
+  document.querySelector(".social-icons").classList.toggle("hidden");
+});
+
 document.querySelector('form').addEventListener("submit",function(e){
     e.preventDefault();
 
@@ -20,10 +27,10 @@ document.querySelector('form').addEventListener("submit",function(e){
     all_user_data.push(user_data);
     localStorage.setItem('users_accounts',JSON.stringify(all_user_data));
 
-    fname.value="";
-    lname.value="";
-    email.value="";
-    password.value="";
+    fname.value = "";
+    lname.value = "";
+    email.value = "";
+    password.value = "";
 
     window.location.href="./index.html";
 });
