@@ -24,7 +24,7 @@
     <header>
         <nav class="navbar">
           <img src="./assets/logo2.PNG" alt="logo picture with one word" class="logo"/>
-          <div class="nav-list">
+          <div class="nav-list hidden">
             <ul>
               <li><a href="#">Home</a></li>
               <li><a href="#Skills">About us</a></li>
@@ -32,7 +32,7 @@
               <li><a href="#" class="dark_mode">Dark mode</a></li>
             </ul>
           </div>
-          <div class="social-icons">
+          <div class="social-icons hidden">
             <ul>
               <li>
                 <a href="https://www.instagram.com/eng_farah92/?r=nametag%22%3E">
@@ -60,7 +60,7 @@
     <!-- Main Section -->
     <main>
         <div class="row-profile">
-            <form onsubmit="register()">
+            <form>
                 <div class="col col-1">
                   <h1>Register</h1>
                   <br><br><br>
@@ -70,14 +70,15 @@
                   <label for="fname">First name:</label>
                   <input type="text" id="fname" name="fname" placeholder="First Name" required>
 
+                  <label for="lname">Last name:</label>
+                  <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+
                   <label for="email"><b>Email</b></label>
                   <input type="text" placeholder="Enter Email" name="email" id="email" required>
               
                   <label for="password"><b>Password</b></label>
                   <input type="password" placeholder="Enter Password" name="password" id="password" required>
-              
-                  <label for="password-repeat"><b>Repeat Password</b></label>
-                  <input type="password" placeholder="Repeat Password" name="password-repeat" id="password-repeat" required>
+            
                   <hr>
                   <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
               
