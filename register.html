@@ -1,19 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/register.css" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="keywords" content="HTML,CSS,JavaScript,Bootstrap,Full Stack Developer,Quiz,Front-End Developer">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>register form</title>
+
+
+     <!-- Font awesome cdn -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- External Css -->
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/register.css"/>
   </head>
   <body>
+
+    <!-- Header Section -->
     <header>
-      <nav></nav>
-    </header>
-    <main></main>
-    <footer></footer>
+        <nav class="navbar">
+          <img src="./assets/logo2.PNG" alt="logo picture with one word" class="logo"/>
+          <div class="nav-list hidden">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#Skills">About us</a></li>
+              <li><a href="#Clients">Contact us</a></li>
+              <li><a href="#" class="dark_mode">Dark mode</a></li>
+            </ul>
+          </div>
+          <div class="social-icons hidden">
+            <ul>
+              <li>
+                <a href="https://www.instagram.com/eng_farah92/?r=nametag%22%3E">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/zsamamah/projectTwo-QuizWebsite%22%3E">
+                  <i class="fa fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/farah-habarnih/%22%3E">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="toggle-btn">
+          <i class="fa fa-bars"></i>
+        </div>
+      </header>
+
+    <!-- Main Section -->
+    <main>
+        <div class="row-profile">
+            <form>
+                <div class="col col-1">
+                  <h1>Register</h1>
+                  <br><br><br>
+                  <p>Please fill in this form to create an account.</p>
+                  <hr>
+
+                  <label for="fname">First name:</label>
+                  <input type="text" id="fname" name="fname" placeholder="First Name" required>
+
+                  <label for="lname">Last name:</label>
+                  <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="email" id="email" required>
+              
+                  <label for="password"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="password" id="password" required>
+            
+                  <hr>
+                  <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+              
+                  <button type="submit" class="registerbtn">Register</button>
+                </div>
+                
+              </form>
+            <div class="col col-2">
+                <div class="profile-img">
+                    <img src="./assets/profile.PNG" alt="">
+                </div>
+            </div>
+        </div>
+        
+
+    </main>
+
+
+<!-- Footer Section -->
+    <footer>
+        
+
+    </footer>
     <script src="./js/register.js"></script>
   </body>
 </html>

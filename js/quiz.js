@@ -55,7 +55,11 @@ sessionStorage.setItem('questionsNum',qLength);
 
 function startQuiz(){
     document.getElementById("z_quizBrief").style.display="none";
-    document.getElementById("startQuizBtn").style.display="none";
+    document.getElementById("startQuizBtn").style.display = "none";
+    document.getElementById("flip-box").style.display = "none"; //written by Haneen//
+    document.getElementById("demo").style.display = "flex";//written by Haneen//
+    document.getElementById("demo").style.justifyContent = "center";
+    document.getElementById("z_body").style.backgroundSize = "cover";//written by Haneen//
     next();
 }
 let counter=0;
@@ -71,26 +75,31 @@ function next(){
     let f=document.createElement("form");
     f.setAttribute("onchange","activeBtn()");
     for(let i=0;i<4;i++){
-        let x=document.createElement("input");
+        let x = document.createElement("input");
         x.type="radio";
         x.name="asx";
         x.id=`a${i+1}`;
         x.value=questions[i].value;
-        let y=document.createElement("label");
-        y.setAttribute("for",x.id);
+        let y = document.createElement("label");
+        
+        y.setAttribute("for", x.id);
         y.innerText=questions[counter].a[i];
+        
         if(i+1==val){
             x.value=1;
         }
         else{
             x.value=0;
-        }
+        }    
         f.appendChild(x);
         f.append(y);
         f.appendChild(document.createElement("br"));
     }
     let btn=document.createElement("button");
-    btn.type="button";
+    btn.type = "button";
+    
+    btn.style.backgroundColor = "#fafcfd"; //written by Haneen//
+    btn.style.color = "#9e9e9e82"; //written by Haneen//
     if(counter==questions.length-1){
         btn.innerText="submit";
         btn.setAttribute("onclick","z_result()");
@@ -115,9 +124,27 @@ function z_result(){
 function activeBtn(){
     let answers=["a1","a2","a3","a4"];
     document.getElementById("nextBtn").disabled = false;
+    //written by Haneen//
+    document.getElementById("nextBtn").style.backgroundColor = "#3467d9c9";
+    document.getElementById("nextBtn").style.color = "white";
+    document.getElementById("nextBtn").onmouseover = function () {
+        mouseOver();
+    }
+    document.getElementById("nextBtn").onmouseout = function () {
+        mouseOut();
+    }    
+    function mouseOver(){
+        document.getElementById("nextBtn").style.transform = "scale(1.1)";
+    }
+    function mouseOut(){
+        document.getElementById("nextBtn").style.transform = "scale(1)";
+    }
+    //end of Haneen edition//
+
+
     for(let i=0;i<4;i++){
         if(document.getElementById(answers[i]).checked){
-            sessionStorage.setItem(`q${counter}`,i+1);
+            sessionStorage.setItem(`q${counter}`, i + 1);
         }
     }
     checkAnswer();
@@ -130,5 +157,4 @@ function checkAnswer(){
             sessionStorage.setItem(`result${counter}`,1);
         else
             sessionStorage.setItem(`result${counter}`,0);
-    
 } 
