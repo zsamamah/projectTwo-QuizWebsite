@@ -74,17 +74,17 @@
             quickly as you can to rise through the rankings and rule your living
             room.
           </p>
-          <span
-            ><button class="btn register">Register</button
-            ><button class="btn login">Login</button></span
-          >
+          <span>
+            <a href="./register.html" class="btn register">Register</a>
+            <a href="#" class="btn login">login</a>
+          </span>
         </div>
 
         <img src="./assets/header-image-section.jpg" alt="quiz image" />
       </section>
     </header>
     <main>
-      <form autocomplete="off">
+      <form>
       <h1>LOGIN</h1>
       <div class="form-group">
         <input
@@ -98,17 +98,85 @@
       <div class="form-group">
         <input
           type="password"
-          name="pwd"
-          id="pwd"
+          name="password"
+          id="password"
           placeholder="Password"
           required
         />
+        <p class="msg_error"></p>
       </div>
       <div class="form-group">
         <button type="submit">Sign In</button>
       </div>
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_form">
+          <form action="#" method="POST">
+            <label for="stayupdated">Stay updated </label>
+            <input type="email" name="stayupdated" id="stayupdated" />
+            <input type="submit" value="Subscribe!">
+          </form>
+        </div>
+        
+        <div class="social_footer">
+            <h2>let`s get social:</h2>
+            <ul>
+              <a href="https://www.instagram.com/eng_farah92/?r=nametag">
+                <i class="fa fa-instagram"></i>
+              <a href="https://github.com/zsamamah/projectTwo-QuizWebsite">
+                <i class="fa fa-github"></i>
+              <a href="https://www.linkedin.com/in/farah-habarnih/">
+                <i class="fa fa-linkedin"></i>
+            </ul>
+        </div>
+      </div>
+
+      <div class="container">
+           <div class="col">
+              <p>About us</p>
+              <ul>
+                  <li>Online Learning</li>
+                  <li>About Us</li>
+                  <li>careers</li>
+                  <li>Press Center</li>
+                  <li>Become An Instructor</li>
+              </ul>
+          </div>
+          <div class="col">
+              <p>Campus</p>
+              <ul>
+                  <li>Our Plans</li>
+                  <li>Free trial</li>
+                  <li>Academic solutions</li>
+                  <li>Business Solutions</li>
+                  <li>Government Solutions</li>
+              </ul>
+          </div>
+          <div class="col">
+              <p>Study</p>
+              <ul>
+                  <li>Admissions Policy</li>
+                  <li>Getting Started</li>
+                  <li>Online Application</li>
+                  <li>Visa Information</li>
+                  <li>Tuition Calculator</li>
+              </ul>
+          </div>
+          <div class="col">
+              <p>Support</p>
+              <ul>
+                  <li>Support</li>
+                  <li>Contact us</li>
+                  <li>System Requirments</li>
+                  <li>Register Activation key</li>
+                  <li>Site Feedback</li>
+              </ul>
+          </div>
+      </div>
+      <hr>
+      <p id="lastp">Copyrigh Â©2021 All rights reserved | This template is made by group 5 .</p>
+    </footer>
     <script src="./js/index.js"></script>
   </body>
 </html>
