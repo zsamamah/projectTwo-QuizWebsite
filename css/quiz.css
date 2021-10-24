@@ -67,8 +67,8 @@ html {
   font-family: "Times New Roman", Times, serif;
 }
 #startQuizBtn {
-  width: 29vw;
-  height: 20vh;
+  width: 31.5vw;
+  height: 12vh;
   font-size: 1.2em;
   background-color: #fafcfd;
   border: royalblue;
@@ -89,11 +89,11 @@ h3 {
   text-align: left;
 }
 .flip-box {
-  margin-top: 2em;
+  margin-top: 10em;
   /* background-color: #f6da7e; */
 
-  width: 20em;
-  height: 20em;
+  width: 16em;
+  height: 15em;
   border: 1px solid #457edf;
   perspective: 1000px;
 }
@@ -140,7 +140,7 @@ h6 {
 .flip-box-front {
   /* background: linear-gradient(rgb(255, 255, 255, 0.3), rgb(255, 255, 255, 0.3)),
       url("/..Capture.PNG"); */
-  background-image: url("../Capture.PNG");
+  background-image: url("./assets/Capture.PNG");
 }
 #demo {
   margin-right: 25em;

@@ -54,8 +54,13 @@ let qLength=questions.length;
 sessionStorage.setItem('questionsNum',qLength);
 
 function startQuiz(){
+   
     document.getElementById("z_quizBrief").style.display="none";
-    document.getElementById("startQuizBtn").style.display="none";
+    document.getElementById("startQuizBtn").style.display = "none";
+    document.getElementById("flip-box").style.display = "none";
+    document.getElementById("demo").style.display = "block"
+    document.getElementById("z_body").style.background = "linear-gradient(rgb(255, 255, 255, 0.1),rgb(255, 255, 255, 0.1)),url(\"https://images-ext-2.discordapp.net/external/IjVwEcH5gIzCLQlqoVQkKi_gRxaYcYRXO-_5ijIIVDo/https/assets.kpmg/is/image/kpmg/dotted-spherical-texture-light-blue-background%3Acq5dam.web.1200.630\")";
+    document.getElementById("z_body").style.backgroundSize = "cover";
     next();
 }
 let counter=0;
@@ -71,7 +76,8 @@ function next(){
     let f=document.createElement("form");
     f.setAttribute("onchange","activeBtn()");
     for(let i=0;i<4;i++){
-        let x=document.createElement("input");
+        let x = document.createElement("input");
+        
         x.type="radio";
         x.name="asx";
         x.id=`a${i+1}`;
