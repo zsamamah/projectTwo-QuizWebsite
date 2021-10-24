@@ -57,10 +57,12 @@ function startQuiz(){
    
     document.getElementById("z_quizBrief").style.display="none";
     document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("flip-box").style.display = "none";
-    document.getElementById("demo").style.display = "block"
-    document.getElementById("z_body").style.background = "linear-gradient(rgb(255, 255, 255, 0.1),rgb(255, 255, 255, 0.1)),url(\"https://images-ext-2.discordapp.net/external/IjVwEcH5gIzCLQlqoVQkKi_gRxaYcYRXO-_5ijIIVDo/https/assets.kpmg/is/image/kpmg/dotted-spherical-texture-light-blue-background%3Acq5dam.web.1200.630\")";
-    document.getElementById("z_body").style.backgroundSize = "cover";
+    document.getElementById("flip-box").style.display = "none"; //written by Haneen//
+    document.getElementById("demo").style.display = "flex";//written by Haneen//
+    document.getElementById("demo").style.justifyContent = "center";
+    document.querySelector(".navbar").style.display = "none";
+    document.getElementById("z_body").style.backgroundSize = "cover";//written by Haneen//
+
     next();
 }
 let counter=0;
@@ -82,21 +84,29 @@ function next(){
         x.name="asx";
         x.id=`a${i+1}`;
         x.value=questions[i].value;
-        let y=document.createElement("label");
-        y.setAttribute("for",x.id);
-        y.innerText=questions[counter].a[i];
+        let y = document.createElement("label");
+        
+        y.setAttribute("for", x.id);
+        y.innerHTML = "<p>" + questions[counter].a[i];
+        // y.innerText = questions[counter].a[i];
+        
         if(i+1==val){
             x.value=1;
         }
         else{
             x.value=0;
         }
+        
+    
         f.appendChild(x);
         f.append(y);
         f.appendChild(document.createElement("br"));
     }
     let btn=document.createElement("button");
-    btn.type="button";
+    btn.type = "button";
+    
+    btn.style.backgroundColor = "#fafcfd"; //written by Haneen//
+    btn.style.color = "#9e9e9e82"; //written by Haneen//
     if(counter==questions.length-1){
         btn.innerText="submit";
         btn.setAttribute("onclick","z_result()");
@@ -121,9 +131,35 @@ function z_result(){
 function activeBtn(){
     let answers=["a1","a2","a3","a4"];
     document.getElementById("nextBtn").disabled = false;
+    //written by Haneen//
+    document.getElementById("nextBtn").style.backgroundColor = "#3467d9c9";
+    document.getElementById("nextBtn").style.color = "white";
+    document.getElementById("nextBtn").onmouseover = function () {
+        mouseOver()
+        
+    }
+    document.getElementById("nextBtn").onmouseout = function () {
+        mouseOut()
+        
+    }    
+    function mouseOver() {
+        document.getElementById("nextBtn").style.transform = "scale(1.1)";
+        // document.getElementsByTagName('input').style.transform = "scale(1.1)";
+    
+    }
+        function mouseOut() {
+            document.getElementById("nextBtn").style.transform = "scale(1)";
+            //  document.getElementsByTagNameNS('input').style.transform = "scale(1)";
+        
+                }
+    //end of Haneen edition//
+
+    
+   
     for(let i=0;i<4;i++){
         if(document.getElementById(answers[i]).checked){
-            sessionStorage.setItem(`q${counter}`,i+1);
+            sessionStorage.setItem(`q${counter}`, i + 1);
+           
         }
     }
     checkAnswer();
