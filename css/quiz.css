@@ -104,27 +104,25 @@ a {
     left: 5px;
   }
 }
-
-body {
+.bgimg{
   height: 100%;
   width: 100%;
   background-image: url("/assets/e58bfa24-f6a8-4dbe-b9bd-f8dfd37c5c99.jfif");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
+}
+body {
+  height: 100%;
   width: 100%;
 }
-#z_body {
-  font-size: 1.4em;
-}
-#z_body ul {
-  margin: 1em;
-  list-style-type: disc;
-}
+
 #z_container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  justify-content: center;
+  height: 100vh;
 }
 #z_quizBrief {
   margin: 1em;
@@ -153,7 +151,6 @@ html {
   height: 100%;
 }
 #z_body {
-  display: flex;
   font-size: 1.4em;
 }
 #z_body ul {
@@ -267,9 +264,10 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 35em;
-  height: auto;
-  margin: 10% auto;
+  width: 60vw;
+  font-size: 1.1em;
+  /* height: auto; */
+  margin: 20vh auto;
   padding: 1em;
   font-family: "Times New Roman", Times, serif;
   color: #4339a4eb;
@@ -289,14 +287,14 @@ h6 {
   height: 2em;
   font-size: 20px;
 }
-label p {
+label{
   padding: 0.2em;
   width: 1em;
 
   border-radius: 1em;
   display: inline;
 }
-p:hover {
+label:hover {
   /* transform: scale(1.1); */
   font-size: 1.1em;
   transition-delay: 0.2s;
