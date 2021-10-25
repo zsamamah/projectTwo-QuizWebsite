@@ -36,7 +36,7 @@ const questions = [
     },
     {
         "q":"What is the correct JavaScript syntax to change the content of the HTML element below? \n <p id=\"demo\">This is a demonstration.</p>",
-        "a":["document.getElementByName(\"p\").innerHTML = \"Hello World!\";","document.getElementById(\"demo\").innerHTML = \"Hello World!\";","document.getElement(\"p\").innerHTML = \"Hello World!\";","#demo.innerHTML = \"Hello World!\";"],
+        "a":["document.getElementByName(\"p\").innerHTML = \"Hello World!\";","document.getElementById(\" demo\").innerHTML = \"Hello World!\";","document.getElement(\"p\").innerHTML = \"Hello World!\";","#demo.innerHTML = \"Hello World!\";"],
         "value":2
     },
     {
