@@ -31,7 +31,7 @@ const questions = [
     },
     {
         "q":"How can you open a link in a new tab/browser window?",
-        "a":["<a href=\"url\" target=\"new\">","<a href=\"url\" target=\"_blank\">","<a href=\"url\" new>","You can`t do it using HTML"],
+        "a":["<a href=\"url\" target =\"new\">","<a href=\"url\" target =\"_blank\">","<a href=\"url\" new>","You can`t do it using HTML"],
         "value":2
     },
     {
