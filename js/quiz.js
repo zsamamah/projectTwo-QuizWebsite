@@ -31,12 +31,12 @@ const questions = [
     },
     {
         "q":"How can you open a link in a new tab/browser window?",
-        "a":["<a href=\"url\" target=\"new\">","<a href=\"url\" target=\"_blank\">","<a href=\"url\" new>","You can`t do it using HTML"],
+        "a":["<a href=\"url\" target =\"new\">","<a href=\"url\" target =\"_blank\">","<a href=\"url\" new>","You can`t do it using HTML"],
         "value":2
     },
     {
         "q":"What is the correct JavaScript syntax to change the content of the HTML element below? \n <p id=\"demo\">This is a demonstration.</p>",
-        "a":["document.getElementByName(\"p\").innerHTML = \"Hello World!\";","document.getElementById(\" demo\").innerHTML = \"Hello World!\";","document.getElement(\"p\").innerHTML = \"Hello World!\";","#demo.innerHTML = \"Hello World!\";"],
+        "a":["document.getElementByName(\" p\").innerHTML = \"Hello World!\";","document.getElementById(\" demo\").innerHTML = \"Hello World!\";","document.getElement(\" p\").innerHTML = \"Hello World!\";","#demo.innerHTML = \"Hello World!\";"],
         "value":2
     },
     {
