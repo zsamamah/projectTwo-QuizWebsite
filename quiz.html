@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="./css/quiz.css" />
   </head>
 
-  <body id="z_body">
-    <nav></nav>
+  <body id="z_body" onload="loadCookie()">
+    <nav id="quiz_nav">
+     <div><h3 id="cookies"></h3></div>
+      <div><button type="button" onclick="logout()">LogOut</button></div>
+    </nav>
     <div class="bgimg">
     <main id="z_container">
         <div>
