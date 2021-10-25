@@ -1,7 +1,5 @@
-//...........Get UserName_Tharaa...........//
-  let userName=document.cookie.split("=")[1];
+let userName=document.cookie.split("=")[1];
   console.log(userName);
-//.............Tharaa..............
 let scrollBtn=document.getElementById("scroll-up");
 document.addEventListener('scroll',function(){
     if(document.body.scrollTop>20|| document.documentElement.scrollTop>20){
@@ -11,16 +9,14 @@ else{
 }
 })
 
-let result=0;   //........Tharaa.........
+let result=0;
 let questionNum=sessionStorage.getItem('questionsNum');
 for(let i=1;i<=questionNum;i++){
    if(sessionStorage.getItem(`result${i}`)==1){result++;}
 }
-//...........Aya_var.............................
 let A_resCont= document.getElementById('A_resultContainer');
 let A_red = 'rgba(255, 99, 99, 0.12)';
 let A_green='rgba(97, 179, 97, 0.2)';
-// ..........Tharaa_code.........................
 let resultDiv=document.getElementById('th_Result');
 let comment=document.getElementById('th_Comment');
 let icon=document.getElementById('iconId');
@@ -34,7 +30,6 @@ if(result>=questionNum*0.5){
        comment.innerHTML="Not bad";
   } else if(result>=questionNum*0.7 && result<questionNum*0.9){ comment.innerHTML="Very good";}
    else if(result>=questionNum*0.9 && result<=questionNum*1){comment.innerHTML="Excellent";}
-// document.body.style.background=A_green; //aya_code...........
 }
 else{
     let status=document.getElementById("th_Status");
@@ -42,7 +37,6 @@ else{
     icon.className="fas fa-times-circle";
     status.innerHTML=`Oops,${userName}! You Failed`;
     score.innerHTML=`${result}/${questionNum}`;
-    // document.body.style.background=A_red; //aya_code..........
 }
 const togglebtn = document.querySelector(".toggle-btn");
 
@@ -58,12 +52,7 @@ togglebtn.addEventListener("click", () => {
   let showLink= document.getElementById("show");
   if(showLink.innerHTML==="Hide Table"){showLink.innerHTML="Show Table Result";}
   else{showLink.innerHTML="Hide Table";}
-    }
-    
-    //..........Result Table hide _Aya............
-
- 
-//....................AYA'S WORK ON TABLE& STORAGE.............................
+}
         let table1=document.getElementById('table');
         for(let a_i=0;a_i<questionNum;a_i++){
             //    let answers= sessionStorage.getItem(`answers${a_i}`);
@@ -92,19 +81,10 @@ togglebtn.addEventListener("click", () => {
                 td3.innerHTML='<img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/fa314a/external-close-banking-and-finance-kiranshastry-lineal-color-kiranshastry.png"/>';
             }
         }
-    //....................End of table commented by Aya.............................//
-
-     //.........................Tharaa Code...................................//
-    //  let logoutBtn=document.getElementById('logout');
-    //  logoutBtn.addEventListener('click',function(){
-    //     //  window.location.href="./index.html";
-    //      sessionStorage.clear();
-    //      document.cookie=`username=${userName};expires=Wed, 05 Aug 1990 23:00:00 UTC`;
-    //  })
 
      function logout(){
         document.cookie="username=;expires=Thu, 01 Jan 1970";
         localStorage.removeItem("logged_in");
-        // document.getElementById("cookies").innerText="";
+        sessionStorage.clear();
         window.location.href="./index.html";
     }
