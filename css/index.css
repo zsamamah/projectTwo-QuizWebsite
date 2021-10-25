@@ -517,10 +517,37 @@ hr {
     width: 130px;
     height: 130px;
   }
+
+  .login_form {
+    padding: 3em;
+  }
+
+  .form_sections {
+    padding: 1em;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .col {
     margin: 0 0 1.3em 0;
+  }
+
+  .login_form {
+    padding: 1em;
+  }
+
+  .login_form button {
+    padding: 0.9em 7em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login_form {
+    padding: 0.4em;
+  }
+}
+@media screen and (max-width: 350px) {
+  .login_form {
+    padding: 1em;
   }
 }
