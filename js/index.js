@@ -53,6 +53,9 @@ function showError(error_type) {
 document.querySelector(".login").addEventListener("click", (e) => {
   e.preventDefault();
   document.querySelector(".form_sections").classList.toggle("form_hidden");
+  document
+    .querySelector(".form_sections")
+    .scrollIntoView({ behavior: "smooth" });
 });
 
 let scrollBtn = document.getElementById("scroll-up");
