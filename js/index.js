@@ -24,6 +24,9 @@ document.querySelector("form").addEventListener("submit", (e) => {
         r_data[i].password === password.value
       ) {
         window.location.href = "./quiz.html";
+        localStorage.setItem("logged_in", JSON.stringify(r_data[i]));
+        showError(" ");
+        break;
       } else {
         // if there is a incorrect email & password
         if (
@@ -50,7 +53,3 @@ function showError(error_type) {
   document.querySelector(".msg_error").style.display = "block";
   document.querySelector(".msg_error").textContent = `${error_type}`;
 }
-
-document.querySelector(".login").addEventListener("click", () => {
-  document.querySelector("form").style.display = "block";
-});

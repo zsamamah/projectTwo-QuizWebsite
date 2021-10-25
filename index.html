@@ -35,10 +35,9 @@
         />
         <div class="nav-list hidden">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#Skills">About us</a></li>
-            <li><a href="#Clients">Contact us</a></li>
-            <li><a href="#" class="dark_mode">Dark mode</a></li>
+            <li><a href="#" class="nav__link">Home</a></li>
+            <li><a href="#Skills" class="nav__link">About us</a></li>
+            <li><a href="#Clients" class="nav__link">Contact us</a></li>
           </ul>
         </div>
         <div class="social-icons hidden">
@@ -84,99 +83,158 @@
       </section>
     </header>
     <main>
-      <form>
-      <h1>LOGIN</h1>
-      <div class="form-group">
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Email Address"
-          required
-        />
-      </div>
-      <div class="form-group">
-        <input
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Password"
-          required
-        />
-        <p class="msg_error"></p>
-      </div>
-      <div class="form-group">
-        <button type="submit">Sign In</button>
-      </div>
+      <section class="form_sections">
+        <form class="login_form">
+          <h1>LOGIN</h1>
+          <div class="form-group">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <p class="msg_error"></p>
+          </div>
+          <div class="form-group">
+            <button type="submit">Sign In</button>
+          </div>
+        </form>
+
+        <div class="intro_section_container">
+          <h1>Welcome to our web app</h1>
+          <h2>Glad to see you here!</h2>
+          <p>
+            Aaron web quiz brings trivia night to your TV! Grab up to 5 of your
+            friends, pick your avatar, then answer the trivia questions as
+            quickly as you can to rise through the rankings and rule your living
+            room.
+          </p>
+        </div>
+      </section>
+
+      <section class="section testimonials-section" id="section--5">
+        <h1>Testimonials</h1>
+        <div class="holder-testimonials">
+          <div class="person">
+            <img src="./assets/client1.png" alt="musallam" class="img-person" />
+            <p>
+              A hardworking man, pays attention to the smallest details of work,
+              helps those around him.
+            </p>
+            <cite> - David twinner</cite>
+          </div>
+          <div class="person">
+            <img
+              src="./assets/client2.png"
+              alt="Cristina Gomez"
+              class="img-person"
+            />
+            <p>
+              A wonderful, efficient man with a love of learning and
+              problem-solving ability.
+            </p>
+            <cite> - Cristina Gomez</cite>
+          </div>
+          <div class="person">
+            <img
+              src="./assets/client1.png"
+              alt="Abdulaziz Quranfoleh"
+              class="img-person"
+            />
+            <p>
+              Bad programmers worry about the code. Good programmers worry about
+              DS.
+            </p>
+            <cite> - Jonas mathew</cite>
+          </div>
+        </div>
+      </section>
     </main>
+
     <footer class="footer">
       <div class="container">
         <div class="footer_form">
           <form action="#" method="POST">
             <label for="stayupdated">Stay updated </label>
             <input type="email" name="stayupdated" id="stayupdated" />
-            <input type="submit" value="Subscribe!">
+            <input type="submit" value="Subscribe!" />
           </form>
         </div>
-        
+
         <div class="social_footer">
-            <h2>let`s get social:</h2>
-            <ul>
-              <a href="https://www.instagram.com/eng_farah92/?r=nametag">
-                <i class="fa fa-instagram"></i>
-              <a href="https://github.com/zsamamah/projectTwo-QuizWebsite">
-                <i class="fa fa-github"></i>
-              <a href="https://www.linkedin.com/in/farah-habarnih/">
-                <i class="fa fa-linkedin"></i>
-            </ul>
+          <h2>let`s get social:</h2>
+          <ul>
+            <a href="https://www.instagram.com/eng_farah92/?r=nametag">
+              <i class="fa fa-instagram"></i
+            ></a>
+            <a href="https://github.com/zsamamah/projectTwo-QuizWebsite">
+              <i class="fa fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/farah-habarnih/">
+              <i class="fa fa-linkedin"></i
+            ></a>
+          </ul>
         </div>
       </div>
 
       <div class="container">
-           <div class="col">
-              <p>About us</p>
-              <ul>
-                  <li>Online Learning</li>
-                  <li>About Us</li>
-                  <li>careers</li>
-                  <li>Press Center</li>
-                  <li>Become An Instructor</li>
-              </ul>
-          </div>
-          <div class="col">
-              <p>Campus</p>
-              <ul>
-                  <li>Our Plans</li>
-                  <li>Free trial</li>
-                  <li>Academic solutions</li>
-                  <li>Business Solutions</li>
-                  <li>Government Solutions</li>
-              </ul>
-          </div>
-          <div class="col">
-              <p>Study</p>
-              <ul>
-                  <li>Admissions Policy</li>
-                  <li>Getting Started</li>
-                  <li>Online Application</li>
-                  <li>Visa Information</li>
-                  <li>Tuition Calculator</li>
-              </ul>
-          </div>
-          <div class="col">
-              <p>Support</p>
-              <ul>
-                  <li>Support</li>
-                  <li>Contact us</li>
-                  <li>System Requirments</li>
-                  <li>Register Activation key</li>
-                  <li>Site Feedback</li>
-              </ul>
-          </div>
+        <div class="col">
+          <p>About us</p>
+          <ul>
+            <li>Online Learning</li>
+            <li>About Us</li>
+            <li>careers</li>
+            <li>Press Center</li>
+            <li>Become An Instructor</li>
+          </ul>
+        </div>
+        <div class="col">
+          <p>Campus</p>
+          <ul>
+            <li>Our Plans</li>
+            <li>Free trial</li>
+            <li>Academic solutions</li>
+            <li>Business Solutions</li>
+            <li>Government Solutions</li>
+          </ul>
+        </div>
+        <div class="col">
+          <p>Study</p>
+          <ul>
+            <li>Admissions Policy</li>
+            <li>Getting Started</li>
+            <li>Online Application</li>
+            <li>Visa Information</li>
+            <li>Tuition Calculator</li>
+          </ul>
+        </div>
+        <div class="col">
+          <p>Support</p>
+          <ul>
+            <li>Support</li>
+            <li>Contact us</li>
+            <li>System Requirments</li>
+            <li>Register Activation key</li>
+            <li>Site Feedback</li>
+          </ul>
+        </div>
       </div>
-      <hr>
-      <p id="lastp">Copyrigh Â©2021 All rights reserved | This template is made by group 5 .</p>
+      <hr />
+      <p id="lastp">
+        Copyrigh Â©2021 All rights reserved | This template is made by group 5 .
+      </p>
     </footer>
+
     <script src="./js/index.js"></script>
   </body>
 </html>
