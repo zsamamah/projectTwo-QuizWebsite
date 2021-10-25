@@ -54,6 +54,13 @@ let qLength=questions.length;
 sessionStorage.setItem('questionsNum',qLength);
 
 function startQuiz(){
+    let user_cookie=document.cookie;
+    // console.log(user_cookie);
+    if(user_cookie=="username=" || user_cookie==null){
+        alert("please login before start exam!");
+        window.location.href="./index.html";
+    }
+    else{
     document.getElementById("z_quizBrief").style.display="none";
     document.getElementById("startQuizBtn").style.display = "none";
     document.getElementById("flip-box").style.display = "none"; //written by Haneen//
@@ -62,6 +69,7 @@ function startQuiz(){
     document.getElementById("z_body").style.backgroundSize = "cover";//written by Haneen//
     document.getElementById("quiz_nav").style.display="none";//written by zaid
     next();
+    }
 }
 let counter=0;
 function next(){
@@ -163,7 +171,7 @@ function loadCookie(){
     // console.log(localStorage.getItem("logged_in"));
     let user_data=localStorage.getItem("logged_in")
     user_data=JSON.parse(user_data);
-    console.log(user_data);
+    // console.log(user_data);
     let cname="username";
     let cvalue=`${user_data["first_name"]} ${user_data["last_name"]}`;
     let exdays=20;
