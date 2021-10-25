@@ -14,11 +14,9 @@ document.querySelector("form").addEventListener("submit", (e) => {
   let r_data = localStorage.getItem("users_accounts");
 
   if (r_data) {
-    // if there is local storage ...
     r_data = JSON.parse(r_data);
 
     for (let i = 0; i < r_data.length; i++) {
-      // if there is a valid email & password
       if (
         r_data[i].email === email.value &&
         r_data[i].password === password.value
@@ -28,7 +26,6 @@ document.querySelector("form").addEventListener("submit", (e) => {
         showError(" ");
         break;
       } else {
-        // if there is a incorrect email & password
         if (
           r_data[i].password !== password.value &&
           r_data[i].email !== email.value
@@ -42,7 +39,6 @@ document.querySelector("form").addEventListener("submit", (e) => {
       }
     }
   } else {
-    // if there is no local storage
     email.value = "";
     password.value = "";
     showError("Please go to register page & create an account!");
