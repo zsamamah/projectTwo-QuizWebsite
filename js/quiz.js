@@ -56,7 +56,7 @@ sessionStorage.setItem('questionsNum',qLength);
 function startQuiz(){
     let user_cookie=document.cookie;
     // console.log(user_cookie);
-    if(user_cookie=="username=" || user_cookie==null){
+    if(user_cookie=="username=" || user_cookie==null || user_cookie==""){
         alert("please login before start exam!");
         window.location.href="./index.html";
     }
