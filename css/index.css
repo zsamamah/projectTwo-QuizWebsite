@@ -4,7 +4,6 @@ html {
 }
 
 body {
-  font-family: "rubik", sans-serif;
   background-color: #f3f3f3;
   color: #444;
 }
@@ -30,6 +29,18 @@ a {
   margin: 0px 20px;
   color: #55527c;
   font-size: 20px;
+}
+
+#scroll-up {
+  display: none;
+  position: fixed;
+  margin-left: 90%;
+  cursor: pointer;
+  z-index: 99;
+  color: #475edf;
+  font-size: 1.7rem;
+  margin-right: 3%;
+  bottom: 0;
 }
 
 .nav__link:link,
@@ -86,7 +97,6 @@ a {
 }
 
 .intro_section_container {
-  width: 30em;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -143,6 +153,10 @@ span {
 
 main {
   background-color: #f4f6f6;
+}
+
+.form_hidden {
+  display: none;
 }
 
 .login_form {
@@ -233,8 +247,7 @@ cite {
 
 .footer {
   background-color: #0b0b1d;
-  color: white;
-  font-family: "Sen", sans-serif;
+  color: #fefefe;
   font-size: 1.7em;
   padding: 1.5em;
 }
@@ -244,7 +257,6 @@ cite {
   flex-direction: row;
   justify-content: space-around;
   padding-bottom: 1.1em;
-  flex-wrap: wrap;
 }
 .smicons {
   margin: 1%;
@@ -267,12 +279,15 @@ cite {
   padding: 0;
   margin: 0;
   list-style: none;
-  color: #868c98;
   font-size: 15px;
 }
 .col > ul > li:hover {
   list-style: none;
   color: white;
+}
+
+.col > ul > li > a {
+  color: #9fa8c3;
 }
 #lastp {
   text-align: center;
@@ -296,7 +311,18 @@ hr {
 }
 .col > p {
   margin-bottom: 0.3em;
-  font-size: 1.3em;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.social_footer ul > a {
+  color: #9fa8c3;
+  margin-right: 0.1em;
+}
+
+.col ul li > a:hover,
+.social_footer ul > a:hover {
+  color: #fefefe;
 }
 
 @media screen and (max-width: 480px) {
@@ -447,5 +473,17 @@ hr {
   .person img {
     width: 140px;
     height: 140px;
+  }
+}
+
+@media all and (min-width: 530px) {
+  .intro_section_container {
+    width: 30em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .col {
+    margin: 0 0 1.3em 0;
   }
 }
