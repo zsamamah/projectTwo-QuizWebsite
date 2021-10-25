@@ -1,3 +1,6 @@
+//...........Get UserName_Tharaa...........//
+  let userName=document.cookie.split("=")[1];
+  console.log(userName);
 //.............Tharaa..............
 let scrollBtn=document.getElementById("scroll-up");
 document.addEventListener('scroll',function(){
@@ -24,7 +27,7 @@ let icon=document.getElementById('iconId');
 let score=document.getElementById('th_Score');
 if(result>=questionNum*0.5){
     let status=document.getElementById("th_Status");
-    status.innerHTML='Congratulations!';
+    status.innerHTML=`Congratulations,${userName}!`;
     score.innerHTML=`${result}/${questionNum}`;
 
     if(result>=questionNum*0.5 && result<questionNum*0.7){
@@ -37,7 +40,7 @@ else{
     let status=document.getElementById("th_Status");
     resultDiv.style.setProperty('--theme-Color', 'red');
     icon.className="fas fa-times-circle";
-    status.innerHTML='Oops! You Failed';
+    status.innerHTML=`Oops,${userName}! You Failed`;
     score.innerHTML=`${result}/${questionNum}`;
     // document.body.style.background=A_red; //aya_code..........
 }
@@ -108,4 +111,5 @@ togglebtn.addEventListener("click", () => {
      logoutBtn.addEventListener('click',function(){
         //  window.location.href="./index.html";
          sessionStorage.clear();
+         document.cookie=`username=${userName};expires=Wed, 05 Aug 1990 23:00:00 UTC`;
      })

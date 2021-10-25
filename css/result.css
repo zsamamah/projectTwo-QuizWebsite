@@ -7,16 +7,29 @@ body{
     padding: 0;
     background-color: rgb(234 238 240);
 }
+/*............Tharaa.................*/
+#scroll-up{
+  display: none;
+  position: fixed;
+  margin-left: 90%;
+  cursor: pointer;
+  z-index: 99;
+  color: 475edf;
+  font-size: 1.7rem;
+  margin-right: 3%;
+  bottom: 0;
+}
 
 .th_Result{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;   
     color: var(--theme-Color);
+    line-height: 1.5rem;
 }
 .th_Status{
     font-size: 2rem;
+    margin-bottom: 2%;
 }
 .th_Result>i{
     font-size: 4rem;
@@ -28,7 +41,7 @@ body{
 
 /* ....aya_code ........*/
 #A_resultContainer{
-    width: 50rem;
+    width: 50%;
     height: auto;
     padding: 2em;
     margin: 4em auto;
@@ -42,17 +55,21 @@ body{
   tr:nth-child(odd) {
   background-color: rgba(145, 147, 161, 0.349);
   }
-  td ,th{
+  td,th {
 
     border-bottom: rgb(152, 152, 219) solid 0.5px;
     text-align: center;
-    padding: 0em 1em;
     padding: 1em;
-    vertical-align: middle
+    vertical-align: middle;
+    word-wrap: break-word;
   }
-  th{
+  .tableHead{
       font-weight: bold;
-      vertical-align: middle
+      vertical-align: middle;
+      display: flex;
+      justify-content: space-around;
+      border-bottom: rgb(152, 152, 219) solid 0.5px;
+
   }
   /* #table{
     display: none;
@@ -62,11 +79,14 @@ body{
   .showTable{
     display: none;
     margin: 2rem auto;
-    width:100%;
+    /* width:80%; */
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
   }
   .showTable.display{
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    
   }
   
   /* ......aya_end code...... */
@@ -133,18 +153,89 @@ a {
     text-shadow: 1px 1px 2px black;
     color: black;
   }
-  /*............Tharaa.................*/
-  #scroll-up{
-    display: none;
-    position: fixed;
-    margin-left: 90%;
-    cursor: pointer;
-    z-index: 99;
-    color: 475edf;
-    font-size: 1.7rem;
-    margin-right: 3%;
-    bottom: 0;
+  
+  /*     Footer     */
+  .footer {
+    background-color: #0b0b1d;
+    color: #fefefe;
+    font-size: 1.7em;
+    padding: 1.5em;
   }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 1.1em;
+  }
+  .smicons {
+    margin: 1%;
+  }
+  .smicons:hover {
+    color: turquoise;
+  }
+  .col {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+  }
+  .col > ul {
+    line-height: 1.5;
+    margin: 0;
+  }
+  .col > ul > li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 15px;
+  }
+  .col > ul > li:hover {
+    list-style: none;
+    color: white;
+  }
+  
+  .col > ul > li > a {
+    color: #9fa8c3;
+  }
+  #lastp {
+    text-align: center;
+    font-weight: 100;
+    font-size: 15px;
+    color: #9fa8c3;
+  }
+  
+  .footer_form,
+  .social_footer {
+    display: flex;
+  }
+  
+  .social_footer h2,
+  label[for="stayupdated"] {
+    margin-right: 0.7em;
+  }
+  
+  hr {
+    margin-top: 0;
+  }
+  .col > p {
+    margin-bottom: 0.3em;
+    font-size: 1em;
+    font-weight: 600;
+  }
+  
+  .social_footer ul > a {
+    color: #9fa8c3;
+    margin-right: 0.1em;
+  }
+  
+  .col ul li > a:hover,
+  .social_footer ul > a:hover {
+    color: #fefefe;
+  }
+  
+
 /*..........Media-Query...............*/
   @media all and (max-width: 1024px) {
     .toggle-btn i {
@@ -191,3 +282,9 @@ a {
       left: 5px;
     }
   }
+ 
+  
+  @media screen and (max-width: 480px) {
+    .col {
+      margin: 0 0 1.3em 0;
+    }}
