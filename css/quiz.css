@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap');
+
 .bgimg{
   height: 100%;
   width: 100%;
@@ -10,43 +12,79 @@ body {
   height: 100%;
   width: 100%;
 }
+#z_logo_container{
+  text-align: center;
+}
+#z_logo{
+  height: 5em;
+}
 #quiz_nav{
   padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background-color: #eaeef0;
 }
 #cookies{
   text-align: center;
+  font-family: 'Rubik', sans-serif;
+  color: #475edf;
 }
-#z_container {
+#quiz_nav button{
+  font-family: 'Rubik', sans-serif;
+  border: none;
+  width: max-content;
+  padding: 10px;
+  background-color: rgb(247, 142, 142);
+  border-radius: 20px;
+}
+#quiz_nav button:hover{
+  background-color: rgb(243, 102, 102);
+  color: white;
+  transition-duration: 0.4s;
+}
+#z_container{
+  margin: 1em;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   height: 100vh;
 }
-#z_quizBrief {
-  margin: 1em;
-  text-align: center;
-  font-size: 1.3em;
-}
-#startQuizBtn {
+
+/* #startQuizBtn {
   width: 50vw;
   height: 20vh;
   font-size: 1.2em;
   background-color: #457edf;
   color: white;
+  font-family: 'Rubik', sans-serif;
 }
 #startQuizBtn:hover {
   background-color: #457eff;
   font-size: 1.3em;
+} */
+#startQuizBtn {
+  width: 55vw;
+  border-radius: 1.5em;
+  border: solid 1.5px #c4e0fde6;
+  height: 12vh;
+  font-size: 1.2em;
+  background-color: #201170c2;
+  border: royalblue;
+  color: #cfd6ee;
+  font-family: 'Rubik', sans-serif;
+}
+#startQuizBtn:hover {
+  background-color: #7d91be;
+  color: #ffffff;
+  font-size: 1.3em;
+  transition-duration: 0.3s;
 }
 #qe1 {
   display: none;
-}
-h3 {
-  text-align: center;
 }
 html {
   width: 100%;
@@ -67,31 +105,17 @@ html {
   gap: 20px;
 }
 #z_quizBrief {
+  margin: 1em;
+  font-family: 'Rubik', sans-serif;
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
   font-size: 0.8em;
   height: 100%;
-  color: #4682a0;
-  font-family: "Times New Roman", Times, serif;
+  color: #475edf;
 }
-#startQuizBtn {
-  width: 55vw;
-  border-radius: 1.5em;
-  border: solid 1.5px #c4e0fde6;
-  height: 12vh;
-  font-size: 1.2em;
-  background-color: #201170c2;
-  border: royalblue;
-  color: #cfd6ee;
-  font-family: "Times New Roman", Times, serif;
-}
-#startQuizBtn:hover {
-  background-color: #7d91be;
-  color: #fafcfd;
-  font-size: 1.3em;
-}
+
 #qe1 {
   display: none;
 }
@@ -99,7 +123,7 @@ h3 {
   font-weight: bold;
   color: #171130b0;
   text-align: left;
-  font-family: sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 .flip-box {
   border-radius: 1.5em;
@@ -124,7 +148,8 @@ h3 {
   align-items: center;
   color: #4682a0;
   font-weight: bold;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Rubik', sans-serif;
+  color: #475edf;
 }
 .flip-box:hover .flip-box-inner {
   transform: rotateY(180deg);
@@ -147,7 +172,7 @@ h3 {
 h6 {
   font-size: 0.8em;
   font-family: "Times New Roman", Times, serif;
-  color: #4682a0;
+  color: #475edf;
 }
 .flip-box-back {
   background-color: #fafcfd;
@@ -168,7 +193,7 @@ h6 {
   /* height: auto; */
   margin: 20vh auto;
   padding: 1em;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Rubik', sans-serif;
   color: #4339a4eb;
   border-radius: 1.5em;
   border: solid 1.5px #c4e0fde6;
@@ -189,7 +214,7 @@ h6 {
 label{
   padding: 0.2em;
   width: 1em;
-
+  font-family: 'Rubik', sans-serif;
   border-radius: 1em;
   display: inline;
 }
@@ -226,7 +251,11 @@ label:hover {
     margin-bottom: 20px;
   }
 }
-
+@media only screen and (max-width:720px) {
+  #z_quizBrief{
+    font-size: 0.5em;
+  }
+}
 @media only screen and (max-width:541px){
   #demo{
     word-wrap: break-word;
@@ -260,12 +289,17 @@ label:hover {
   }
 }
 @media only screen and (max-width:320px) {
+  #quiz_nav{
+    width: 100%;
+  }
   .flip-box {
     height: 70vh;
     width: 90vw;
   }
   #z_quizBrief{
-    font-size: 0.45em;
+    font-size: 0.4em;
+    /* margin: 1.5em; */
+    line-height: 40px;
   }
   h3{
     font-size: 0.8em;
