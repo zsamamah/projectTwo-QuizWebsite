@@ -1,7 +1,10 @@
+//...........Get UserName_Tharaa...........//
+  let userName=document.cookie.split("=")[1];
+  console.log(userName);
 //.............Tharaa..............
 let scrollBtn=document.getElementById("scroll-up");
 document.addEventListener('scroll',function(){
-    if(document.body.scrollTop>20 || document.documentElement.scrollTop > 20){
+    if(document.body.scrollTop>20|| document.documentElement.scrollTop>20){
 scrollBtn.style.display="block";}
 else{
     scrollBtn.style.display="none";
@@ -24,7 +27,7 @@ let icon=document.getElementById('iconId');
 let score=document.getElementById('th_Score');
 if(result>=questionNum*0.5){
     let status=document.getElementById("th_Status");
-    status.innerHTML='Congratulations!';
+    status.innerHTML=`Congratulations,${userName}!`;
     score.innerHTML=`${result}/${questionNum}`;
 
     if(result>=questionNum*0.5 && result<questionNum*0.7){
@@ -37,7 +40,7 @@ else{
     let status=document.getElementById("th_Status");
     resultDiv.style.setProperty('--theme-Color', 'red');
     icon.className="fas fa-times-circle";
-    status.innerHTML='Oops! You Failed';
+    status.innerHTML=`Oops,${userName}! You Failed`;
     score.innerHTML=`${result}/${questionNum}`;
     // document.body.style.background=A_red; //aya_code..........
 }
@@ -48,25 +51,13 @@ togglebtn.addEventListener("click", () => {
   document.querySelector(".social-icons").classList.toggle("hidden");
 }); 
 
-    //..........Result Table show _Aya............
-    // let a_counter=0;
-    // function tableResult(){
-    //     if(a_counter==0){
-    //         document.getElementById("table").style.display='block';
-    //     document.getElementById("show").innerHTML='Hide Table';
-    //     a_counter++;
-    //     }
-    //     else{
-    //     document.getElementById("table").style.display='none';
-    //     document.getElementById("show").innerHTML='Show Table Result';
-    //     a_counter=0;
-    //     }
-    function tableResult(){
-    let table=document.getElementById('table');
-    table.classList.toggle("display");
-   let showLink= document.getElementById("show");
-   if(showLink.innerHTML==="Hide Table"){showLink.innerHTML="Show Table Result";}
-   else{showLink.innerHTML="Hide Table";}
+  function tableResult(){
+  let table=document.getElementById('table');
+  table.classList.toggle("display");
+  document.getElementById("footer").style.position="realtive";
+  let showLink= document.getElementById("show");
+  if(showLink.innerHTML==="Hide Table"){showLink.innerHTML="Show Table Result";}
+  else{showLink.innerHTML="Hide Table";}
     }
     
     //..........Result Table hide _Aya............
@@ -108,4 +99,5 @@ togglebtn.addEventListener("click", () => {
      logoutBtn.addEventListener('click',function(){
         //  window.location.href="./index.html";
          sessionStorage.clear();
+         document.cookie=`username=${userName};expires=Wed, 05 Aug 1990 23:00:00 UTC`;
      })
