@@ -51,25 +51,13 @@ togglebtn.addEventListener("click", () => {
   document.querySelector(".social-icons").classList.toggle("hidden");
 }); 
 
-    //..........Result Table show _Aya............
-    // let a_counter=0;
-    // function tableResult(){
-    //     if(a_counter==0){
-    //         document.getElementById("table").style.display='block';
-    //     document.getElementById("show").innerHTML='Hide Table';
-    //     a_counter++;
-    //     }
-    //     else{
-    //     document.getElementById("table").style.display='none';
-    //     document.getElementById("show").innerHTML='Show Table Result';
-    //     a_counter=0;
-    //     }
-    function tableResult(){
-    let table=document.getElementById('table');
-    table.classList.toggle("display");
-   let showLink= document.getElementById("show");
-   if(showLink.innerHTML==="Hide Table"){showLink.innerHTML="Show Table Result";}
-   else{showLink.innerHTML="Hide Table";}
+  function tableResult(){
+  let table=document.getElementById('table');
+  table.classList.toggle("display");
+  document.getElementById("footer").style.position="realtive";
+  let showLink= document.getElementById("show");
+  if(showLink.innerHTML==="Hide Table"){showLink.innerHTML="Show Table Result";}
+  else{showLink.innerHTML="Hide Table";}
     }
     
     //..........Result Table hide _Aya............

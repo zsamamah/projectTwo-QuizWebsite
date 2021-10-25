@@ -12,44 +12,46 @@
   <body>
     <header>
      <a href="#"><i class="fas fa-chevron-circle-up" id="scroll-up"></i></a>  <!--Tharaa-->
-      <nav class="navbar">
-        <img src="./assets/logo2.PNG" alt="logo picture with one word" class="logo"/>
-        <div class="nav-list">
-          <ul>
-            <li><a href="#" class="th_home">Home</a></li>
-            <li><a href="#Skills">About us</a></li>
-            <li><a href="#Clients">Contact us</a></li>
-            <li><a href="index.html" id="logout">Logout</a></li>
-            <li><a href="#" class="dark_mode">Dark mode</a></li>
-          </ul>
-        </div>
-        <div class="social-icons">
-          <ul>
-            <li>
-              <a href="https://www.instagram.com/eng_farah92/?r=nametag%22%3E">
-                <i class="fa fa-instagram"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/zsamamah/projectTwo-QuizWebsite%22%3E">
-                <i class="fa fa-github"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/farah-habarnih/%22%3E">
-                <i class="fa fa-linkedin"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+     <nav class="navbar">
+      <img
+        src="./assets/logo.png"
+        alt="logo picture with one word"
+        class="logo"
+      />
+      <div class="nav-list hidden">
+        <ul>
+          <li><a href="#" class="nav__link">Home</a></li>
+          <li><a href="#Skills" class="nav__link">About us</a></li>
+          <li><a href="#Clients" class="nav__link">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="social-icons hidden">
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/eng_farah92/?r=nametag">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/zsamamah/projectTwo-QuizWebsite">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/farah-habarnih/">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
       <div class="toggle-btn">
         <i class="fa fa-bars"></i>
       </div>
     </header>
     <main>
       <!-- Tharaa comment-->
-      <div id="A_resultContainer"> 
+      <!-- <div id="A_resultContainer">  -->
       <div id="th_Result" class="th_Result">
         <h1 id="th_Status" class="th_Status"></h1>
         <i id="iconId" class="fas fa-check-circle"></i>
@@ -58,56 +60,18 @@
         <p id="th_Comment"></p>
       </div>
       <!-- Result table_Aya............................... -->
+      <div>
       <table id="table" class="showTable" >
         <tr class="tableHead">
       <th class="question">Question</th>
       <th class="answer">Your Answer</th>
       <th class="A_state">Answer Status</th>
     </tr>
-      <!-- <tr class="row1">
-        <td class="ques1">hi</td>
-        <td class="ans1">hi</td>
-        <td class="A_state1">true</td></tr>
-        <tr class="row2">
-          <td class="ques2">hi</td>
-          <td class="ans2">hi</td>
-        <td class="A_state2">true</td></tr>
-          <tr class="row3">
-            <td class="ques3">hi</td>
-            <td class="ans3">hi</td>
-          <td class="A_state3">true</td></tr>
-            <tr class="row4">
-              <td class="ques4">hi</td>
-              <td class="ans4">hi</td>
-            <td class="A_state4">true</td></tr>
-              <tr class="row5">
-          <td class="ques5">hi</td>
-          <td class="ans5">hi</td>
-        <td class="A_state5">true</td></tr>
-          <tr class="row6">
-            <td class="ques6">hi</td>
-            <td class="ans6">hi</td>
-          <td class="A_state6">true</td></tr>
-            <tr class="row7">
-              <td class="ques7">hi</td>
-              <td class="ans7">hi</td>
-            <td class="A_state7">true</td></tr>
-              <tr class="row8">
-                <td class="ques8">hi</td>
-                <td class="ans8">hi</td>
-              <td class="A_state8">true</td></tr>
-                <tr class="row9">
-                  <td class="ques9">hi</td>
-                  <td class="ans9">hi</td>
-                <td class="A_state9">true</td></tr>
-                  <tr class="row10">
-                    <td class="ques10">hi</td>
-                    <td class="ans10">hi</td>
-                  <td class="A_state10">true</td></tr> -->
-                  </table>
+     </table>
+    </div>
                   <a href="#table" onclick="tableResult()"><p id="show"   > Show Table Result</p></a>
                   <!-- end of result table............................ -->
-     </div>
+     <!-- </div> -->
     </main>
     <footer class="footer" id="footer">
       <div class="container">
