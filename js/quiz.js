@@ -60,6 +60,7 @@ function startQuiz(){
     document.getElementById("demo").style.display = "flex";//written by Haneen//
     document.getElementById("demo").style.justifyContent = "center";
     document.getElementById("z_body").style.backgroundSize = "cover";//written by Haneen//
+    document.getElementById("quiz_nav").style.display="none";//written by zaid
     next();
 }
 let counter=0;
@@ -158,3 +159,53 @@ function checkAnswer(){
         else
             sessionStorage.setItem(`result${counter}`,0);
 } 
+function loadCookie(){
+    // console.log(localStorage.getItem("logged_in"));
+    let user_data=localStorage.getItem("logged_in")
+    user_data=JSON.parse(user_data);
+    console.log(user_data);
+    let cname="username";
+    let cvalue=`${user_data["first_name"]} ${user_data["last_name"]}`;
+    let exdays=20;
+    setCookie(cname,cvalue,exdays);
+    document.getElementById("cookies").innerText="Welcome "+cvalue+"!";
+}
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+  function logout(){
+      document.cookie="username=;expires=Thu, 01 Jan 1970";
+      localStorage.removeItem("logged_in");
+      document.getElementById("cookies").innerText="";
+      window.location.href="./index.html";
+  }
+  
+//   function getCookie(cname) {
+//     let name = cname + "=";
+//     let ca = document.cookie.split(';');
+//     for(let i = 0; i < ca.length; i++) {
+//       let c = ca[i];
+//       while (c.charAt(0) == ' ') {
+//         c = c.substring(1);
+//       }
+//       if (c.indexOf(name) == 0) {
+//         return c.substring(name.length, c.length);
+//       }
+//     }
+//     return "";
+//   }
+  
+//   function checkCookie() {
+//     let user = getCookie("username");
+//     if (user != "") {
+//       alert("Welcome again " + user);
+//     } else {
+//       user = prompt("Please enter your name:", "");
+//       if (user != "" && user != null) {
+//         setCookie("username", user, 365);
+//       }
+//     }
+//   }
