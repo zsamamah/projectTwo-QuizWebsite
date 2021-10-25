@@ -67,7 +67,7 @@ function startQuiz(){
     document.getElementById("demo").style.display = "flex";//written by Haneen//
     document.getElementById("demo").style.justifyContent = "center";
     document.getElementById("z_body").style.backgroundSize = "cover";//written by Haneen//
-    document.getElementById("quiz_nav").style.display="none";//written by zaid
+    document.getElementById("logoutBtn").style.display="none";//written by zaid
     next();
     }
 }
