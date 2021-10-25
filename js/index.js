@@ -53,3 +53,17 @@ function showError(error_type) {
   document.querySelector(".msg_error").style.display = "block";
   document.querySelector(".msg_error").textContent = `${error_type}`;
 }
+
+document.querySelector(".login").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector(".form_sections").classList.toggle("form_hidden");
+});
+
+let scrollBtn = document.getElementById("scroll-up");
+document.addEventListener("scroll", function () {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+});

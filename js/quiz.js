@@ -31,12 +31,12 @@ const questions = [
     },
     {
         "q":"How can you open a link in a new tab/browser window?",
-        "a":["<a href=\"url\" target=\"new\">","<a href=\"url\" target=\"_blank\">","<a href=\"url\" new>","You can`t do it using HTML"],
+        "a":["<a href= \"url\" target =\"new\">","<a href= \"url\" target =\"_blank\">","<a href= \"url\" new>","You can`t do it using HTML"],
         "value":2
     },
     {
         "q":"What is the correct JavaScript syntax to change the content of the HTML element below? \n <p id=\"demo\">This is a demonstration.</p>",
-        "a":["document.getElementByName(\"p\").innerHTML = \"Hello World!\";","document.getElementById(\"demo\").innerHTML = \"Hello World!\";","document.getElement(\"p\").innerHTML = \"Hello World!\";","#demo.innerHTML = \"Hello World!\";"],
+        "a":["document.getElementByName (\"p\").innerHTML = \"Hello World!\";","document.getElementById (\"demo\").innerHTML = \"Hello World!\";","document.getElement (\"p\").innerHTML = \"Hello World!\";","#demo.innerHTML = \"Hello World!\";"],
         "value":2
     },
     {
@@ -54,13 +54,22 @@ let qLength=questions.length;
 sessionStorage.setItem('questionsNum',qLength);
 
 function startQuiz(){
+    let user_cookie=document.cookie;
+    // console.log(user_cookie);
+    if(user_cookie=="username=" || user_cookie==null || user_cookie==""){
+        alert("please login before start exam!");
+        window.location.href="./index.html";
+    }
+    else{
     document.getElementById("z_quizBrief").style.display="none";
     document.getElementById("startQuizBtn").style.display = "none";
     document.getElementById("flip-box").style.display = "none"; //written by Haneen//
     document.getElementById("demo").style.display = "flex";//written by Haneen//
     document.getElementById("demo").style.justifyContent = "center";
     document.getElementById("z_body").style.backgroundSize = "cover";//written by Haneen//
+    document.getElementById("logoutBtn").style.display="none";//written by zaid
     next();
+    }
 }
 let counter=0;
 function next(){
@@ -158,3 +167,53 @@ function checkAnswer(){
         else
             sessionStorage.setItem(`result${counter}`,0);
 } 
+function loadCookie(){
+    // console.log(localStorage.getItem("logged_in"));
+    let user_data=localStorage.getItem("logged_in")
+    user_data=JSON.parse(user_data);
+    // console.log(user_data);
+    let cname="username";
+    let cvalue=`${user_data["first_name"]} ${user_data["last_name"]}`;
+    let exdays=20;
+    setCookie(cname,cvalue,exdays);
+    document.getElementById("cookies").innerText="Welcome "+cvalue+"!";
+}
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+  function logout(){
+      document.cookie="username=;expires=Thu, 01 Jan 1970";
+      localStorage.removeItem("logged_in");
+      document.getElementById("cookies").innerText="";
+      window.location.href="./index.html";
+  }
+  
+//   function getCookie(cname) {
+//     let name = cname + "=";
+//     let ca = document.cookie.split(';');
+//     for(let i = 0; i < ca.length; i++) {
+//       let c = ca[i];
+//       while (c.charAt(0) == ' ') {
+//         c = c.substring(1);
+//       }
+//       if (c.indexOf(name) == 0) {
+//         return c.substring(name.length, c.length);
+//       }
+//     }
+//     return "";
+//   }
+  
+//   function checkCookie() {
+//     let user = getCookie("username");
+//     if (user != "") {
+//       alert("Welcome again " + user);
+//     } else {
+//       user = prompt("Please enter your name:", "");
+//       if (user != "" && user != null) {
+//         setCookie("username", user, 365);
+//       }
+//     }
+//   }
