@@ -238,7 +238,19 @@ main{
   .social_footer ul > a:hover {
     color: #fefefe;
   }
-  
+  .navbar button{
+    font-family: 'Rubik', sans-serif;
+    border: none;
+    width: max-content;
+    padding: 10px;
+    background-color: rgb(247, 142, 142);
+    border-radius: 20px;
+  }
+  .navbar button:hover{
+    background-color: rgb(243, 102, 102);
+    color: white;
+    transition-duration: 0.4s;
+  }
 
 /*..........Media-Query...............*/
 @media all and (max-width: 1024px) {

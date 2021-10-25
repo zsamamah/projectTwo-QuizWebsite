@@ -53,19 +53,6 @@ body {
   align-items: center;
   height: 100vh;
 }
-
-/* #startQuizBtn {
-  width: 50vw;
-  height: 20vh;
-  font-size: 1.2em;
-  background-color: #457edf;
-  color: white;
-  font-family: 'Rubik', sans-serif;
-}
-#startQuizBtn:hover {
-  background-color: #457eff;
-  font-size: 1.3em;
-} */
 #startQuizBtn {
   width: 55vw;
   border-radius: 1.5em;

@@ -95,9 +95,16 @@ togglebtn.addEventListener("click", () => {
     //....................End of table commented by Aya.............................//
 
      //.........................Tharaa Code...................................//
-     let logoutBtn=document.getElementById('logout');
-     logoutBtn.addEventListener('click',function(){
-        //  window.location.href="./index.html";
-         sessionStorage.clear();
-         document.cookie=`username=${userName};expires=Wed, 05 Aug 1990 23:00:00 UTC`;
-     })
+    //  let logoutBtn=document.getElementById('logout');
+    //  logoutBtn.addEventListener('click',function(){
+    //     //  window.location.href="./index.html";
+    //      sessionStorage.clear();
+    //      document.cookie=`username=${userName};expires=Wed, 05 Aug 1990 23:00:00 UTC`;
+    //  })
+
+     function logout(){
+        document.cookie="username=;expires=Thu, 01 Jan 1970";
+        localStorage.removeItem("logged_in");
+        // document.getElementById("cookies").innerText="";
+        window.location.href="./index.html";
+    }
