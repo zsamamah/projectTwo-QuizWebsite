@@ -56,10 +56,25 @@ document.querySelector("#form").addEventListener("submit", function (e) {
 
   if (!localStorage.getItem("users_accounts")) {
     localStorage.setItem("users_accounts", JSON.stringify(all_user_data));
-  } else {
-    let getAcconuts = JSON.parse(localStorage.getItem("users_accounts"));
+  } 
+  else {
+    let found=false;
+    let length=JSON.parse(localStorage.getItem("users_accounts")).length;
+    let users=JSON.parse(localStorage.getItem("users_accounts"));
+    for(let i=0;i<length;i++){
+      if(users[i].email==user_data.email){
+        found=true;
+        break;
+      }
+    }
+    if(found){
+      alert("you already registered!!");
+    }
+    else{
+      let getAcconuts = JSON.parse(localStorage.getItem("users_accounts"));
     getAcconuts.push(user_data);
     localStorage.setItem("users_accounts", JSON.stringify(getAcconuts));
+    }
   }
 
   fname.value = "";

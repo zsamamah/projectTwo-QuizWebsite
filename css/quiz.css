@@ -178,7 +178,7 @@ h6 {
   width: 60vw;
   font-size: 1.1em;
   /* height: auto; */
-  margin: 20vh auto;
+  margin:0 auto;
   padding: 1em;
   font-family: 'Rubik', sans-serif;
   color: #4339a4eb;
@@ -208,8 +208,9 @@ label{
 label:hover {
   /* transform: scale(1.1); */
   font-size: 1.1em;
-  transition-delay: 0.2s;
+  transition-duration: 0.4s;
   background-color: rgb(179, 194, 243);
+  cursor: pointer;
 }
 input {
   margin-bottom: 2em; /*edited by aya*/
@@ -218,6 +219,9 @@ input {
 input:hover,
 label:hover {
   transform: scale(1.1);
+}
+#nextBtn{
+  cursor: pointer;
 }
 @media only screen and (max-width:1024px){
   .flip-box{
@@ -259,7 +263,7 @@ label:hover {
     font-size: 0.8em;
   }
 }
-@media only screen and (max-width:420px) {
+@media only screen and (max-width:530px) {
   .flip-box {
     height: 75vh;
     width: 85vw;
@@ -275,7 +279,7 @@ label:hover {
     margin: 0;
   }
 }
-@media only screen and (max-width:320px) {
+@media only screen and (max-width:355px) {
   #quiz_nav{
     width: 100%;
   }

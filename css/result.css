@@ -33,7 +33,9 @@ body{
   display: block;
   transition: all 0.3s;
 }
-
+.nav-list a{
+  text-decoration: none;
+}
 .social-icons ul i {
   color: #475edf;
   font-size: 1.3em;
@@ -46,7 +48,7 @@ body{
 .toggle-btn i {
   font-size: 30px;
   color: #55527c;
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
   display: none;
@@ -130,7 +132,7 @@ body{
 
   }
   .showTable{
-    width: 70%;
+    /* width: 70%; */
     margin: 2% auto;
     display: none;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
@@ -251,7 +253,15 @@ main{
     color: white;
     transition-duration: 0.4s;
   }
-
+  #A_resultContainer{
+    padding: 2em;
+    width: 40rem;
+    height: auto;
+    margin: 4em auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
 /*..........Media-Query...............*/
 @media all and (max-width: 1024px) {
   .toggle-btn i {
@@ -325,18 +335,7 @@ main{
     align-items: center;
   }
   }
-  @media screen and (max-width: 850px) and (min-width:679px){
-      .showTable{
-        margin-left:5% ;
-       
-      }
-      
-  }
   @media screen and (max-width: 680px) {
-    /* #A_resultContainer{
-      width:100%;
-      padding: 10px 0px;
-    } */
     .th_Status{
       font-size: 1.2rem;
     }
@@ -344,21 +343,11 @@ main{
       font-size: 3rem;
     }
     .showTable{
-      /* margin:2% auto; */
-      margin-left: 5%;
-
       font-size: 0.8rem;
     }
    
   }
   @media screen and (max-width: 526px) {
-    .showTable{
-      margin-left: 0%;
-      margin-right: 5%;
-    }
-    .footer{
-      width: 100%;
-    }
     .col {
       margin: 0 0 1.3em 0;
     }
@@ -366,11 +355,3 @@ main{
       width:100%;
     }
   }
-    /* @media screen and (min-width: 379px){
-      .footer{
-        width: 100%;
-      }
-      .navbar{
-        width: 100%;
-      }
-    } */

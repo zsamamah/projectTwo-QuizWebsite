@@ -1,5 +1,5 @@
 let userName=document.cookie.split("=")[1];
-  console.log(userName);
+//   console.log(userName);
 let scrollBtn=document.getElementById("scroll-up");
 document.addEventListener('scroll',function(){
     if(document.body.scrollTop>20|| document.documentElement.scrollTop>20){
@@ -48,7 +48,6 @@ togglebtn.addEventListener("click", () => {
   function tableResult(){
   let table=document.getElementById('table');
   table.classList.toggle("display");
-  document.getElementById("footer").style.position="realtive";
   let showLink= document.getElementById("show");
   if(showLink.innerHTML==="Hide Table"){showLink.innerHTML="Show Table Result";}
   else{showLink.innerHTML="Hide Table";}
@@ -71,7 +70,7 @@ togglebtn.addEventListener("click", () => {
             tr.appendChild(td2);
             tr.appendChild(td3);
             table1.appendChild(tr);
-            console.log(a_answer);
+            // console.log(a_answer);
             if(results==1){
                 tr.style.background=A_green;
                 td3.innerHTML='<img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/ffffff/external-check-banking-and-finance-kiranshastry-lineal-color-kiranshastry.png"/>';
