@@ -33,7 +33,7 @@
           alt="logo picture with one word"
           class="logo"
         />
-        <div class="nav-list">
+        <div class="nav-list hidden">
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#Skills">About us</a></li>
@@ -41,7 +41,7 @@
             <li><a href="#" class="dark_mode">Dark mode</a></li>
           </ul>
         </div>
-        <div class="social-icons">
+        <div class="social-icons hidden">
           <ul>
             <li>
               <a href="https://www.instagram.com/eng_farah92/?r=nametag">
@@ -64,8 +64,50 @@
       <div class="toggle-btn">
         <i class="fa fa-bars"></i>
       </div>
+      <section class="intro_section">
+        <div class="intro_section_container">
+          <h1>Welcome to our web app</h1>
+          <h2>Glad to see you here!</h2>
+          <p>
+            Aaron web quiz brings trivia night to your TV! Grab up to 5 of your
+            friends, pick your avatar, then answer the trivia questions as
+            quickly as you can to rise through the rankings and rule your living
+            room.
+          </p>
+          <span
+            ><button class="btn register">Register</button
+            ><button class="btn login">Login</button></span
+          >
+        </div>
+
+        <img src="./assets/header-image-section.jpg" alt="quiz image" />
+      </section>
     </header>
-    <main></main>
+    <main>
+      <form autocomplete="off">
+      <h1>LOGIN</h1>
+      <div class="form-group">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email Address"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="password"
+          name="pwd"
+          id="pwd"
+          placeholder="Password"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <button type="submit">Sign In</button>
+      </div>
+    </main>
     <footer></footer>
     <script src="./js/index.js"></script>
   </body>
