@@ -1,17 +1,9 @@
 html {
-<<<<<<< HEAD
   font-family: 'rubik', sans-serif;
-=======
-  font-family: "rubik", sans-serif;
->>>>>>> 91fa2650ec53e3c80afc2c6e3fcfabeae995bafb
   scroll-behavior: smooth;
 }
 
 body {
-<<<<<<< HEAD
-  font-family: 'rubik', sans-serif;
-=======
->>>>>>> 91fa2650ec53e3c80afc2c6e3fcfabeae995bafb
   background-color: #f3f3f3;
   color: #444;
 }
@@ -39,8 +31,6 @@ a {
   font-size: 20px;
 }
 
-<<<<<<< HEAD
-=======
 #scroll-up {
   display: none;
   position: fixed;
@@ -62,7 +52,6 @@ a {
   transition: all 0.3s;
 }
 
->>>>>>> 91fa2650ec53e3c80afc2c6e3fcfabeae995bafb
 .social-icons ul i {
   color: #475edf;
   font-size: 1.3em;
@@ -80,10 +69,7 @@ a {
   right: 20px;
   display: none;
   cursor: pointer;
-<<<<<<< HEAD
-=======
   scroll-behavior: smooth;
->>>>>>> 91fa2650ec53e3c80afc2c6e3fcfabeae995bafb
 }
 
 .logo {
@@ -92,24 +78,13 @@ a {
   margin-top: 2px;
 }
 
-<<<<<<< HEAD
-.dark_mode {
-  text-shadow: 1px 1px 2px black;
-  color: black;
-}
-
-=======
->>>>>>> 91fa2650ec53e3c80afc2c6e3fcfabeae995bafb
 .intro_section {
   display: flex;
   flex-direction: row;
   background-color: #ffffff;
   justify-content: space-around;
   align-content: center;
-<<<<<<< HEAD
-=======
   padding: 2em;
->>>>>>> 91fa2650ec53e3c80afc2c6e3fcfabeae995bafb
 }
 
 .intro_section img {
@@ -118,10 +93,6 @@ a {
 }
 
 .intro_section_container {
-<<<<<<< HEAD
-  width: 30em;
-=======
->>>>>>> 91fa2650ec53e3c80afc2c6e3fcfabeae995bafb
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -132,11 +103,7 @@ a {
 
 .intro_section_container h1,
 form h1 {
-<<<<<<< HEAD
-  color: #30484e;
-=======
   color: #475edf;
->>>>>>> 91fa2650ec53e3c80afc2c6e3fcfabeae995bafb
   font-size: 2em;
 }
 
@@ -151,15 +118,12 @@ form h1 {
   line-height: 1.5;
 }
 
-<<<<<<< HEAD
-=======
 .form_sections {
   display: flex;
   justify-content: space-around;
   padding: 2em;
 }
 
->>>>>>> 91fa2650ec53e3c80afc2c6e3fcfabeae995bafb
 span {
   margin: 1em 0;
 }
@@ -187,41 +151,15 @@ main {
   background-color: #f4f6f6;
 }
 
-<<<<<<< HEAD
-form {
-=======
 .form_hidden {
   display: none;
 }
 
 .login_form {
->>>>>>> 91fa2650ec53e3c80afc2c6e3fcfabeae995bafb
   display: flex;
   text-align: center;
   align-items: center;
   flex-direction: column;
-<<<<<<< HEAD
-  margin: 0 auto;
-  padding: 5em 10em;
-  border: 2px solid #475edf;
-  width: fit-content;
-  border-radius: 2em;
-  background-color: inherit;
-}
-
-form h1 {
-  line-height: 3;
-}
-
-form input {
-  margin: 0 0 1.4em 0;
-  height: 1.7em;
-  width: 24em;
-}
-
-form button {
-  font-family: 'rubik', sans-serif;
-=======
   padding: 4em 5em;
   border: 1px solid #475edf;
   width: fit-content;
@@ -247,8 +185,7 @@ form button {
 }
 
 .login_form button {
-  font-family: "rubik", sans-serif;
->>>>>>> 91fa2650ec53e3c80afc2c6e3fcfabeae995bafb
+  font-family: 'rubik', sans-serif;
   padding: 0.9em 10em;
   border-radius: 4em;
   border: none;
@@ -257,12 +194,6 @@ form button {
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-form button :hover {
-  background-color: #c2bbbb;
-}
-
-=======
 .login_form button:hover {
   background-color: #c2bbbb;
 }
@@ -387,7 +318,7 @@ cite {
 }
 
 .social_footer h2,
-label[for="stayupdated"] {
+label[for='stayupdated'] {
   margin-right: 0.7em;
 }
 
@@ -424,7 +355,6 @@ hr {
   }
 }
 
->>>>>>> 91fa2650ec53e3c80afc2c6e3fcfabeae995bafb
 @media all and (max-width: 1024px) {
   .toggle-btn i {
     display: block;
@@ -476,10 +406,7 @@ hr {
 
   .intro_section_container {
     margin: 0 auto;
-<<<<<<< HEAD
-=======
     margin-bottom: 4em;
->>>>>>> 91fa2650ec53e3c80afc2c6e3fcfabeae995bafb
   }
 
   .intro_section img {
@@ -489,8 +416,6 @@ hr {
   .intro_section_container h1 {
     margin: 0.5em 0 0 0;
   }
-<<<<<<< HEAD
-=======
 
   .login_form {
     margin-left: 0;
@@ -633,5 +558,4 @@ hr {
   .login_form {
     padding: 1em;
   }
->>>>>>> 91fa2650ec53e3c80afc2c6e3fcfabeae995bafb
 }
